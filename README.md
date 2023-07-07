@@ -10,8 +10,8 @@ Kubespary를 통해 Kubernetes Cluster를 설치하고 Pod를 통해 Database, P
 >NFS 배포 시 NFS-Server 설치 선행 필요
 
 
-##2-2 Kubespray를 통한 클러스터 설치
+## 2-2 Kubespray를 통한 클러스터 설치
 
-##2-3 컨테이너 플랫폼 포털 사용법
+## 2-3 컨테이너 플랫폼 포털 사용법
 
 
