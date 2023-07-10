@@ -46,22 +46,32 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
   
 
 #### Cluster 
-- Overview - 클러스터 정보 조회  
+- Overview - 클러스터 정보 조회 및 생성 및 생성  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/18fca64a-5ffd-4c92-bd85-bbecce082bc7)  
 
-- Node - 클러스터의 Node 정보 조회   
+- Node - 클러스터의 Node 정보 조회 및 생성 및 생성   
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/47639ca0-7df3-495a-a9ab-a4f855c77727)  
  
-- Namespaces - 클러스터 내 Namespace 조회  
+- Namespaces - 클러스터 내 Namespace 조회 및 생성 및 생성  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/0ad1da15-0de5-496e-9a4f-a0bff7ea5378)  
   
   
 #### Workloads
-- Deployment - 클러스터 정보 조회  
+- Deployment - 클러스터 정보 조회 및 생성  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/c06c0ce2-0e10-43da-9793-d7c7e114b7ff)  
   
-- Pods - Deployment된 pod 조회
+- Pods - Deployment된 pod 조회 및 생성  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/9a229eb8-fafa-4035-b246-c7d9322dd91c)
 
-- Replicaset - Deployment된 pod의 Replicaset 조회
+- Replicaset - Deployment된 pod의 Replicaset 조회 및 생성  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/6605a505-27d2-4e70-8426-fdbc9e5da7e3)  
+
+
+#### Service
+- service - service 목록 조회 및 생성  
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/ed2392e3-e0bb-4b8b-85fe-7f7b56758390)  
+- ingress - ingress 목록 조회 및 생성  
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/fea216c1-257c-4f70-87dc-fb8507b9353e)
+
+#### ConfigMaps
+
