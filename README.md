@@ -117,7 +117,20 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 - youtubeJenkinsfile
   - Jenkins 파이프라인 코드(유튜브 영상 출력 페이지)
 
-### 
+### Jenkins Pipeline 코드 작성
+- Jenkins 파이프라인 생성 / Dashboard -> 새로운 item -> pipeline  
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/2174a516-7e6c-4ddd-978d-61ebdb10d2e2)  
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/b67a8a45-21cd-4794-ba0a-24f96491fdd6)  
+- Configure 설정 / Build Trigger Github hook trigger for GITScm polling  
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/b9111193-6b35-4e8f-aa19-5f3b3bfd494d)
+- Jenkins Pipeline / Pipeline script from SCM 선택 -> SCM Git 선택 -> Github Repository 주소 및 Credentials 선택
+- 빌드할 Github Reposiroty의 Branches 선택 
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/12325e44-f6d5-4d5a-98f7-2aaa88da83a8)
+- Github Reposiroty의 파이프라인 스크립트 Path 정의
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/63d78d41-d4d4-4bdd-8772-57a2ae714b4c)
+
+
+
 
 ## 3-6 파이프라인 배포 확인
 - 'kubectl get all -n ingress-nginx'명령어를 통해 ingress 포트확인
