@@ -91,7 +91,7 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 
 
 ## 3-5 파이프라인 코드 작성 및 테스트 
-## 구성요소
+### Github 파일 구성요소
 - nginx-youtube
   - html
   - yaml
@@ -117,6 +117,7 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 - youtubeJenkinsfile
   - Jenkins 파이프라인 코드(유튜브 영상 출력 페이지)
 
+### 
 
 ## 3-6 파이프라인 배포 확인
 - 'kubectl get all -n ingress-nginx'명령어를 통해 ingress 포트확인
