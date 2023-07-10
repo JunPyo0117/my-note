@@ -74,4 +74,11 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/fea216c1-257c-4f70-87dc-fb8507b9353e)
 
 #### ConfigMaps
+- configmaps - configmap 목록 조회 및 생성  
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/3fc10b7f-3eef-4506-aa8e-0e2d4a54ae25)
 
+#### Management 
+- Users - PaaS-TA 컨테이너 플랫폼 포털 계정 정보 조회
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/fddcae5e-5698-452c-9e19-595afa39a736)
+- Roles - PaaS-TA 컨테이너 플랫폼 포털 계정 역할 조회
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/9105b991-6401-454f-bbc3-7df5029525d7)
