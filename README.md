@@ -38,30 +38,5 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 
 ## 2-4 컨테이너 플랫폼 포털 사용법
 ### 포털 메뉴
-메뉴|분류|설명|접근 권한|
-|---|---|---|---|
-Global|Overview|클러스터 정보 대시보드|Super Admin|
-|     |Cluster|                     | Admin (조회 권한)|
-Clusters|	클러스터 정보 관리
-Cloud Accounts	Cloud Accounts 정보 관리
-Instance Code Template	Instance Code Template 정보 관리
-Clusters	Overview	클러스터 내 리소스 대시보드	All
-Nodes	Nodes 정보 관리	Super Admin, Cluster Admin
-Namespaces	Namespaces 정보 관리	All
-Workloads	Deployments	Deployments 정보 관리	All
-Pods	Pods 정보 관리
-ReplicaSets	ReplicaSets 정보 관리
-Services	Services	Services 정보 관리	All
-Ingresses	Ingresses 정보 관리
-Storages	Persistent Volumes	Persistent Volumes 정보 관리	Super Admin, Cluster Admin
-Persistent Volume Claims	Persistent Volume Claims 정보 관리	All
-Storage Classes	Storage Classes 정보 관리	Super Admin, Cluster Admin
-ConfigMaps	ConfigMaps	ConfigMaps 정보 관리	All
-Managements	Users	사용자 관리	Super Admin, Cluster Admin
-Roles	Roles 관리	All
-Resource Quotas	Resource Quotas 정보 관리
-Limit Ranges	Limit Ranges 정보 관리
-Info	Access	컨테이너 플랫폼 포털
-CLI 사용을 위한 환경 설정 정보 관리	All
-Private Repository	Private Repository 정보 관리
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/5e9d074f-3111-48c8-8e23-857b00e65acd)  
 
