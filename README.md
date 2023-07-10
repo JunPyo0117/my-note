@@ -111,6 +111,7 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
     - Deployment
     - Service
     - Configmap
+  - ingress
 - ajpJenkinsfile
   - Jenkins 파이프라인 코드(회원가입 페이지)
 - youtubeJenkinsfile
