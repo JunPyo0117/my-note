@@ -167,6 +167,43 @@ pipeline {
     }
 }
 ```
+```pipeline
+pipeline {
+    agent any
+
+    stages {
+        stage('harbor login & podman build') {
+            steps {
+                      sh 'sudo podman login 52.79.48.121:30002 --username admin --password Harbor12345 --tls-verify=false'
+                      sh 'sudo podman build -t nginx:youtube -f nginx-youtube/Dockerfile .'
+            }
+        }
+		stage('podman tag & push') {
+            steps {
+		      sh 'sudo podman tag nginx:youtube 52.79.48.121:30002/ajp-repository/nginx:youtube'
+	              sh 'sudo podman push 52.79.48.121:30002/ajp-repository/nginx:youtube --tls-verify=false'
+            }
+        }
+		stage('deployment') {
+            steps {
+                      sh 'kubectl apply -f nginx-youtube/yaml/youtube-nginx-service.yaml'
+	              sh 'kubectl apply -f nginx-youtube/yaml/youtube-nginx-deployment.yaml'
+	              sh 'kubectl rollout restart deployment youtube-nginx -n ajp-namespaces'
+            }
+        }
+    }
+}
+```
+- harbor login & podman build
+  + Private Rsistry harbor의 로그인
+  + 회원가입 각각의 nginx/tomcat Dockerfile 빌드
+- podman을 사용하여 tag 및 이미지 Push
+  + 각 빌드한 이미지 tag
+  + 각 이미지 Push
+- 회원가입 페이지 Deployment
+  + Harbor에 저장한 이미지 기반으로 nginx/tomcat 배포
+  + rollout 명령어를 통해 Rollingupdate
+  
 
 
 ## 3-6 파이프라인 배포 확인
