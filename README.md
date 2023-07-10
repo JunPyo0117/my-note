@@ -23,6 +23,7 @@ Kubespary를 통해 Kubernetes Cluster를 설치하고 Pod를 통해 Database, P
 
 ## 2-3 PaaS-TA 컨테이너 플랫폼 단독형 배포 포털 설치
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/3b62d1e6-0254-496d-a984-e36c210cf529)  
+음영처리된 부분 컨테이너 플랫폼 단독형 배포 포털에 포함되지 않음  
 - kubernetes Cluster(Master, Worker) 환경과 데이터 관리를 위한 스토리지 서버로 구성
 - Kubespray를 통해 설치된 Kubernetes Cluster 환경에 컨테이너 플랫폼 포털 이미지
 - Helm Chart를 관리하는 Harbor
