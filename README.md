@@ -129,7 +129,43 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 - Github Reposiroty의 파이프라인 스크립트 Path 정의
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/63d78d41-d4d4-4bdd-8772-57a2ae714b4c)
 
+## Jenkins Pipeline Script 확인
+- ajpJenkinsfile(회원가입 페이지)
+'''
+pipeline {
+    agent any
 
+    stages {
+        stage('harbor login & podman build') {
+            steps {
+                sh 'sudo podman login 52.79.48.121:30002 --username admin --password Harbor12345 --tls-verify=false'
+                sh 'sudo podman build -t tomcat:test -f tomcat/Dockerfile .'
+                sh 'sudo podman build -t nginx:signup -f nginx/Dockerfile .'
+            }
+        }
+		stage('podman tag & push') {
+            steps {
+		sh 'sudo podman tag tomcat:test 52.79.48.121:30002/ajp-repository/tomcat:harbor'
+	        sh 'sudo podman push 52.79.48.121:30002/ajp-repository/tomcat:harbor --tls-verify=false'
+		sh 'sudo podman tag nginx:signup 52.79.48.121:30002/ajp-repository/nginx:signup'
+	        sh 'sudo podman push 52.79.48.121:30002/ajp-repository/nginx:signup --tls-verify=false'
+            }
+        }
+		stage('deployment') {
+            steps {
+                sh 'kubectl apply -f yaml/ingress.yaml'
+                sh 'kubectl apply -f yaml/tomcat/tomcat-service.yaml'
+		sh 'kubectl apply -f yaml/tomcat/tomcat-deployment.yaml'
+	        sh 'kubectl rollout restart deployment tomcat-deployment -n ajp-namespaces'
+
+                sh 'kubectl apply -f yaml/nginx/nginx-configmap.yaml'
+                sh 'kubectl apply -f yaml/nginx/nginx-service.yaml'
+	        sh 'kubectl apply -f yaml/nginx/nginx-deployment.yaml'
+	        sh 'kubectl rollout restart deployment hello-nginx -n ajp-namespaces'
+            }
+        }
+    }
+}'''
 
 
 ## 3-6 파이프라인 배포 확인
