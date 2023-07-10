@@ -9,9 +9,9 @@
 Kubespary를 통해 Kubernetes Cluster를 설치하고 Pod를 통해 Database, Private registry 등 미들웨어 환경을 제공하여 Container Image로 Kubernetes Cluster에 Container Platform 포털 환경을 배포  
 총 필요한 VM 환경으로는 Master VM: 1개, Worker VM: 3개 이상이 필요하고 본 문서는 Kubernetes Cluster 환경을 구성하기 위한 Master VM 과 Worker VM 설치 내용  
 
->컨테이너 플랫폼 v1.4 버전부터는 Cluster 배포 시 Storage가 함께 배포
+><u>컨테이너 플랫폼 v1.4 버전부터는 Cluster 배포 시 Storage가 함께 배포</u>
 
->NFS 배포 시 NFS-Server 설치 선행 필요
+><u>NFS 배포 시 NFS-Server 설치 선행 필요</u>
 
 
 ## 2-2 Kubespray를 통한 클러스터 설치
