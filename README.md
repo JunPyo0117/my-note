@@ -131,7 +131,7 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 
 ## Jenkins Pipeline Script 확인
 - ajpJenkinsfile(회원가입 페이지)  
-'''
+```pipeline
 pipeline {
     agent any
 
