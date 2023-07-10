@@ -23,7 +23,13 @@ Kubespary를 통해 Kubernetes Cluster를 설치하고 Pod를 통해 Database, P
 
 ## 2-3 PaaS-TA 컨테이너 플랫폼 단독형 배포 포털 설치
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/3b62d1e6-0254-496d-a984-e36c210cf529)  
-ubernetes Cluster(Master, Worker) 환경과 데이터 관리를 위한 스토리지 서버로 구성되어 있다. Kubespray를 통해 설치된 Kubernetes Cluster 환경에 컨테이너 플랫폼 포털 이미지 및 Helm Chart를 관리하는 Harbor, 컨테이너 플랫폼 포털 사용자 인증을 관리하는 Keycloak, 인증 데이터를 관리하는 Vault, 메타 데이터를 관리하는 MariaDB(RDBMS) 등 미들웨어 환경을 컨테이너로 제공한다. 총 필요한 VM 환경으로는 Master VM: 1개, Worker VM: 3개 이상이 필요  
+- kubernetes Cluster(Master, Worker) 환경과 데이터 관리를 위한 스토리지 서버로 구성
+- Kubespray를 통해 설치된 Kubernetes Cluster 환경에 컨테이너 플랫폼 포털 이미지
+- Helm Chart를 관리하는 Harbor
+- 컨테이너 플랫폼 포털 사용자 인증을 관리하는 Keycloak
+- 인증 데이터를 관리하는 Vault
+- 메타 데이터를 관리하는 MariaDB(RDBMS) 등 미들웨어 환경을 컨테이너로 제공
+- 총 필요한 VM 환경으로는 Master VM: 1개, Worker VM: 3개 이상이 필요  
 
 kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA 컨테이너 플랫폼 포털 배포   
 [단독형 배포 포털 설치 가이드(PaaS-TA Github)](https://github.com/PaaS-TA/paas-ta-container-platform/blob/master/install-guide/container-platform-portal/paas-ta-container-platform-portal-deployment-standalone-guide.md)  
