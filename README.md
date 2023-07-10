@@ -41,8 +41,9 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/5e9d074f-3111-48c8-8e23-857b00e65acd)  
 
 #### Global
+- 클러스터의 전체적인 정보 및 TOP Node(CPU, Memory)를 조회 가능  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/302b1bca-8105-4a24-8fdd-00673b1be937)  
-클러스터의 전체적인 정보 및 TOP Node(CPU, Memory)를 조회 가능
+  
 
 #### Cluster 
 - 클러스터 정보 조회 가능  
