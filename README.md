@@ -38,7 +38,8 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 
 ## 2-4 컨테이너 플랫폼 포털 사용법
 ### 포털 메뉴
-메뉴|분류|설명|접근 권한
+메뉴|분류|설명|접근 권한|
+|---|---|---|---|
 Global|	Overview	클러스터 정보 대시보드	|Super Admin
 Cluster| Admin (조회 권한)
 Clusters|	클러스터 정보 관리
