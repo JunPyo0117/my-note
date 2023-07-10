@@ -12,7 +12,7 @@ Kubespary를 통해 Kubernetes Cluster를 설치하고 Pod를 통해 Database, P
 >[NFS 서버 설치](https://github.com/PaaS-TA/paas-ta-container-platform/blob/master/install-guide/nfs-server-install-guide.md)
 
 
-## 2-2 Kubespray를 통한 클러스터 설치
+## 2-2 Kubespray를 통한 kubernetes 클러스터 설치
 ### kubespray 란?
 - kubespray 는 쿠버네티스를 쉽게 설치하는 자동화 도구  
 - github을 클론받게 되면, ansible yaml파일들이 정리
@@ -21,8 +21,11 @@ Kubespary를 통해 Kubernetes Cluster를 설치하고 Pod를 통해 Database, P
 [Kubernetes Clouster 설치가이드(PaaS-TA Github)](https://github.com/PaaS-TA/paas-ta-container-platform/blob/master/install-guide/standalone/cp-cluster-install.md)  
 (위 링크 참조하여 kubespray로 쿠버네티스 클러스터 구성)
 
+## 2-3 PaaS-TA 컨테이너 플랫폼 단독형 배포 포털 설치
+kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA 컨테이너 플랫폼 포털 배포   
+[단독형 배포 포털 설치 가이드](https://github.com/PaaS-TA/paas-ta-container-platform/blob/master/install-guide/container-platform-portal/paas-ta-container-platform-portal-deployment-standalone-guide.md)  
 
 
-## 2-3 컨테이너 플랫폼 포털 사용법
+## 2-4 컨테이너 플랫폼 포털 사용법
 
 
