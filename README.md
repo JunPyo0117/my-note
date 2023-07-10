@@ -88,8 +88,36 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 ## 3-2 젠킨스 설치 [혜환 주임님]
 ## 3-3 젠킨스 깃허브 연동(webhook/ credentials) 명노훈
 ## 3-4 명령어 설치(kubectl / podman) 명노훈
-## 3-5 파이프라인 코드 작성 및 테스트 [준표 주임님]
-## 3-6 파이프라인 배포 확인 [준표 주임님]
+
+
+## 3-5 파이프라인 코드 작성 및 테스트 
+## 구성요소
+- nginx-youtube
+  - html
+  - yaml
+  - Dockerfile
+- nginx
+  - config 파일
+  - Dockerfile
+- tomcat
+  - config 파일
+  - jsp 파일
+  - Dockerfile
+- yaml
+  - tomcat
+    - Deployment
+    - Service
+  - nginx
+    - Deployment
+    - Service
+    - Configmap
+- ajpJenkinsfile
+  - Jenkins 파이프라인 코드(회원가입 페이지)
+- youtubeJenkinsfile
+  - Jenkins 파이프라인 코드(유튜브 영상 출력 페이지)
+
+
+## 3-6 파이프라인 배포 확인
 - 'kubectl get all -n ingress-nginx'명령어를 통해 ingress 포트확인
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/2820cd53-f02f-4fe0-935a-c9ff52149618)  
 - ingress 설정에서 /path 확인 및 웹 페이지 접속 확인  
