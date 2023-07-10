@@ -45,12 +45,13 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 클러스터의 전체적인 정보 및 TOP Node(CPU, Memory)를 조회 가능
 
 #### Cluster 
+- 클러스터 정보 조회 가능  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/18fca64a-5ffd-4c92-bd85-bbecce082bc7)  
-클러스터 정보 조회 가능  
-  
+
+- 클러스터의 Node 정보 조회 가능   
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/47639ca0-7df3-495a-a9ab-a4f855c77727)  
-클러스터의 Node 정보 조회 가능  
-  
+ 
+- 클러스터 내 Namespace 조회 가능  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/0ad1da15-0de5-496e-9a4f-a0bff7ea5378)  
-클러스터 내 Namespace 조회 가능  
+  
   
