@@ -41,20 +41,27 @@ kubespray를 통해 kubernetest 클러스터 구성이 완료됐다면 PaaS-TA �
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/5e9d074f-3111-48c8-8e23-857b00e65acd)  
 
 #### Global
-- 클러스터의 전체적인 정보 및 TOP Node(CPU, Memory)를 조회 가능  
+- 클러스터의 전체적인 정보 및 TOP Node(CPU, Memory)를 조회  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/302b1bca-8105-4a24-8fdd-00673b1be937)  
   
 
 #### Cluster 
-- Overview - 클러스터 정보 조회 가능  
+- Overview - 클러스터 정보 조회  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/18fca64a-5ffd-4c92-bd85-bbecce082bc7)  
 
-- Node - 클러스터의 Node 정보 조회 가능   
+- Node - 클러스터의 Node 정보 조회   
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/47639ca0-7df3-495a-a9ab-a4f855c77727)  
  
-- Namespaces - 클러스터 내 Namespace 조회 가능  
+- Namespaces - 클러스터 내 Namespace 조회  
 ![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/0ad1da15-0de5-496e-9a4f-a0bff7ea5378)  
   
   
 #### Workloads
-- Deployment - 클러스터 정보 조회 가능  
+- Deployment - 클러스터 정보 조회  
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/c06c0ce2-0e10-43da-9793-d7c7e114b7ff)  
+  
+- Pods - Deployment된 pod 조회
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/9a229eb8-fafa-4035-b246-c7d9322dd91c)
+
+- Replicaset - Deployment된 pod의 Replicaset 조회
+![image](https://github.com/JunPyo0117/kubernetes/assets/80608601/6605a505-27d2-4e70-8426-fdbc9e5da7e3)  
