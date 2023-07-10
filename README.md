@@ -8,7 +8,7 @@ Kubespary를 통해 Kubernetes Cluster를 설치하고 Pod를 통해 Database, P
 
 >컨테이너 플랫폼 v1.4 버전부터는 Cluster 배포 시 Storage가 함께 배포
 
->NFS 배포 시 NFS-Server 설치 선행 필요
+>NFS 배포 시 NFS-Server 설치 선행 필요  
 >[NFS 서버 설치](https://github.com/PaaS-TA/paas-ta-container-platform/blob/master/install-guide/nfs-server-install-guide.md)
 
 
