@@ -22,7 +22,7 @@ sudo systemctl start postgresql-11
 ## 기본 Database 생성
 `sudo /usr/pgsql-11/bin/postgresql-11-setup initdb`
 
-## 서비스 싱행 및 등록
+## 서비스 실행 및 등록
 ```
 sudo systemctl start postgresql-11
 sudo systemctl enable postgresql-11
@@ -31,17 +31,17 @@ sudo systemctl enable postgresql-11
 # datadir 변경  
 psql 접속  
 `su - postgres -c 'psql'`  
-접속 후 `show data_directory;`로 데이터 저장 위치 확인 
-![image](https://github.com/JunPyo0117/my-history/assets/80608601/709b9ceb-0991-42ce-adff-4acc860f2063)  
+접속 후 `show data_directory;`로 데이터 저장 위치 확인  
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/709b9ceb-0991-42ce-adff-4acc860f2063)   
 
 Postgres service 중지(버전 확인)  
-`systemctl stop postgresql-11.service`
+`systemctl stop postgresql-11.service`  
 
-설정파일 확인(버전 확인)  
-`vi /var/lib/pgsql/11/data/postmaster.opts`  
-/usr/pgsql-11/bin/postgres "-D" "/data/postgres/data"  
+설정파일 확인(버전 확인)   
+`vi /var/lib/pgsql/11/data/postmaster.opts`   
+/usr/pgsql-11/bin/postgres "-D" "/data/postgres/data"   
 
-vi /usr/lib/systemd/system/postgresql-11.service  
+`vi /usr/lib/systemd/system/postgresql-11.service `  
 Environment=PGDATA=/data/postgres/data/  
 
 기존에 있는 data 파일 새 경로로 복사  
