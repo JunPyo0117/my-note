@@ -85,5 +85,6 @@ systemctl daemon-reload
 systemctl start postgresql-11.service
 ```
 접속 후 `show data_directory;`로 변경된 데이터 저장 위치 확인  
-![image](https://github.com/JunPyo0117/my-history/assets/80608601/f3eb4f09-abae-4ddd-8c0c-7f50c83cfc4c)
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/dcdb95dd-914d-4089-8da3-fc970372da08)
+
 
