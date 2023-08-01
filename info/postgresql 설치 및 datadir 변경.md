@@ -28,6 +28,36 @@ sudo systemctl start postgresql-11
 sudo systemctl enable postgresql-11
 ```
 
+## postgresql 외부 접속 허용
+`ALTER USER postgres PASSWORD '<new_password>';`  
+`vi /data/postgres/data/postgresql.conf`  해당 파일에서 외부 접속 하용  
+```
+#------------------------------------------------------------------------------
+# CONNECTIONS AND AUTHENTICATION
+#------------------------------------------------------------------------------
+
+# - Connection Settings -
+
+listen_addresses = '*'          # what IP address(es) to listen on;
+                                        # comma-separated list of addresses;
+                                        # defaults to 'localhost'; use '*' for all
+```
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/affa7248-cd11-4c5b-ac3f-2d6aebd3a7ff)  
+
+
+
+`vi /data/postgres/data/pg_hba.conf` 해당 파일에서 외부 접속 하용  
+```
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+# IPv4 local connections:
+#host    all             all             127.0.0.1/32            ident
+host    all             all             0.0.0.0/0               md5
+```
+ ![image](https://github.com/JunPyo0117/my-history/assets/80608601/692736cc-06f5-4456-90c9-4ea0b046f4ce)   
+
+
 # datadir 변경  
 psql 접속  
 `su - postgres -c 'psql'`  
