@@ -77,7 +77,7 @@ Environment=PGDATA=/data/postgres/data/
 기존에 있는 data 파일 새 경로로 복사  
 ```
 mkdir /data/postgres/
-mv /var/lib/pgsql/9.3/data /data/postgres/
+mv /var/lib/pgsql/11/data /data/postgres/
 ```
 서비스 적용 및 재시작
 ```
