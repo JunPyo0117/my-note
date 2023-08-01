@@ -1,6 +1,4 @@
 # Postgresql 설치
-![image](https://github.com/JunPyo0117/my-history/assets/80608601/a9f22d3b-3cd6-460f-9e0c-fdb09ba056fb)
-
 - https://www.postgresql.org/download/ 해당 사이트에서 환경에 맞게 선택   
 ![image](https://github.com/JunPyo0117/my-history/assets/80608601/774defee-fb65-473e-9f0f-3490c1bf84bb)
 
