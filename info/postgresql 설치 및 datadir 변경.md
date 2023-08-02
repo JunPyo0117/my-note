@@ -34,6 +34,34 @@ psql 접속 후 postgres 계정 비밀번호 변경
 `ALTER USER postgres PASSWORD '<new_password>';`  
 ![image](https://github.com/JunPyo0117/my-history/assets/80608601/c1ca7cd2-2eb6-45f1-8580-6fcea9feba24)
 
+# datadir 변경  
+psql 접속  
+`su - postgres -c 'psql'`  
+접속 후 `show data_directory;`로 데이터 저장 위치 확인  
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/709b9ceb-0991-42ce-adff-4acc860f2063)   
+
+Postgres service 중지(버전 확인)  
+`systemctl stop postgresql-11.service`  
+
+설정파일 확인(버전 확인)   
+`vi /var/lib/pgsql/11/data/postmaster.opts`   
+/usr/pgsql-11/bin/postgres "-D" "/data/postgres/data"   
+
+`vi /usr/lib/systemd/system/postgresql-11.service `  
+Environment=PGDATA=/data/postgres/data/  
+
+기존에 있는 data 파일 새 경로로 복사  
+```
+mkdir /data/postgres/
+mv /var/lib/pgsql/11/data /data/postgres/
+```
+서비스 적용 및 재시작
+```
+systemctl daemon-reload 
+systemctl start postgresql-11.service
+```
+접속 후 `show data_directory;`로 변경된 데이터 저장 위치 확인  
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/dcdb95dd-914d-4089-8da3-fc970372da08)
 
 ## postgresql 외부 접속 허용
 `vi /data/postgres/data/postgresql.conf`  해당 파일에서 외부 접속 하용  
@@ -64,33 +92,6 @@ host    all             all             0.0.0.0/0               md5
  ![image](https://github.com/JunPyo0117/my-history/assets/80608601/692736cc-06f5-4456-90c9-4ea0b046f4ce)   
 
 
-# datadir 변경  
-psql 접속  
-`su - postgres -c 'psql'`  
-접속 후 `show data_directory;`로 데이터 저장 위치 확인  
-![image](https://github.com/JunPyo0117/my-history/assets/80608601/709b9ceb-0991-42ce-adff-4acc860f2063)   
 
-Postgres service 중지(버전 확인)  
-`systemctl stop postgresql-11.service`  
-
-설정파일 확인(버전 확인)   
-`vi /var/lib/pgsql/11/data/postmaster.opts`   
-/usr/pgsql-11/bin/postgres "-D" "/data/postgres/data"   
-
-`vi /usr/lib/systemd/system/postgresql-11.service `  
-Environment=PGDATA=/data/postgres/data/  
-
-기존에 있는 data 파일 새 경로로 복사  
-```
-mkdir /data/postgres/
-mv /var/lib/pgsql/11/data /data/postgres/
-```
-서비스 적용 및 재시작
-```
-systemctl daemon-reload 
-systemctl start postgresql-11.service
-```
-접속 후 `show data_directory;`로 변경된 데이터 저장 위치 확인  
-![image](https://github.com/JunPyo0117/my-history/assets/80608601/dcdb95dd-914d-4089-8da3-fc970372da08)
 
 
