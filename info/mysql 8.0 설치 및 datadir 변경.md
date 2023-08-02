@@ -2,6 +2,9 @@
 
 ## 해당 주소에서 버전에 맞는 레포 다운로드(링크 복사)  
 `https://dev.mysql.com/downloads/repo/yum/`
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/861e0a44-f2a2-4e71-889a-07d97e190497)  
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/060f298a-34f9-4216-8398-7e120aaa84cf)
+
 
 ## mysql 레포지토리 목록을 확인  
 `yum repolist enabled | grep "mysql.*"`
