@@ -69,7 +69,7 @@ socket=/data/mysql/mysql.sock
 `systemctl start mysql`
 
 ## 정상적으로 실행이 안될경우(소켓 에러)  
-아래와 같은 오류 발생 시 심볼릭 링크 설정(변경된 경로의 mysql.sock을 찾지 못하는 오류)
+아래와 같은 오류 발생 시 심볼릭 링크 설정(변경된 경로의 mysql.sock을 찾지 못하는 오류)  
 `ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)`  
 
 `ln -sf /data/mysql/mysql.sock /var/lib/mysql/mysql.sock`  
