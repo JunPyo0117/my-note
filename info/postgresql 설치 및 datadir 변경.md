@@ -32,6 +32,8 @@ sudo systemctl enable postgresql-11
 psql 접속 후 postgres 계정 비밀번호 변경  
 `su - postgres -c 'psql'`
 `ALTER USER postgres PASSWORD '<new_password>';`  
+![image](https://github.com/JunPyo0117/my-history/assets/80608601/c1ca7cd2-2eb6-45f1-8580-6fcea9feba24)
+
 
 ## postgresql 외부 접속 허용
 `vi /data/postgres/data/postgresql.conf`  해당 파일에서 외부 접속 하용  
