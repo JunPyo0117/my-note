@@ -1,4 +1,4 @@
-# MarkDown 사용법
+ㄴㄴㅁ# MarkDown 사용법
 ## 개요
 1. 장점
 2. 단점
@@ -271,9 +271,9 @@ const mycar = {
 - [Wins Cloud 기술 블로그](https://wins-cloud-msp.github.io/,"기술 블로그")
 - GitHub의 _post 폴더에 md 파일 생성
 - yyyy-mm-dd-제목.md 형식으로 저장
-![image](https://github.com/JunPyo0117/my-note/assets/80608601/a9b94174-6719-491f-b3f0-0b4b3d4ad031)
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/31dcba5f-9748-4029-9cef-7901833fdd7b)
 ![image](https://github.com/JunPyo0117/my-note/assets/80608601/2ec87edd-e557-46f8-9445-d609bce14fc4)  
-- 에디터에서 최상단 아래 입력값 입력 후 아래에 MarkDown 언어로 글 작성
+- 에디터에서 최상단 아래 입력값 입력 후 아래에 MarkDown 언어로 글 작성(필수 작성)
 ```
 ---
 layout: post
@@ -283,4 +283,6 @@ categories: DBMS
 tags: [DBMS, PostgreSQL]
 ---
 ```
-
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/304e0fb8-a085-4bfc-8aa3-db7e00d91206)
+- 업로드 후 블로그 포스팅 확인
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/e4b0e29f-7400-422d-a6fc-40f78576ae45)
