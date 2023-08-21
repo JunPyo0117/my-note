@@ -1,8 +1,19 @@
 # MarkDown 사용법
 ## 개요
-- 1.장점
-- 2.단점
-- 3.사용법
+1.장점
+2.단점
+3.사용법
+  1. 제목(Header)
+  2. 수평선(Horizontal Rules)
+  3. 줄바꿈(Line Breaks)
+  4. 강조(Emphasis)
+  5. 인용(Blockquotes)
+  6. 목록(List)
+  7. 특수문자 표현(Backslash Escapes)
+  8. 이미지(img)
+  9. 링크(Links)
+  10. 코드 블록(Code Block)
+  11. 표(Table)
 
 ## 1.장점
 - 문법이 쉽고 간결
@@ -189,7 +200,7 @@ _혼합_ **사용** ~~가능~~
 ```
 [검색엔진](http://www.naver.com "네이버")
 
-### 3-10 코드 블럭
+### 3-10 코드 블럭(Code Block)
 - 간단한 코드는 텍스트 앞 뒤로 ``기호 사용
 - \``` 또는 \~~~
 - \``` 옆에 언어 지정 시 syntax color 적용
@@ -236,7 +247,7 @@ const mycar = {
 };
 ```
 
-### 3-11 표(table)
+### 3-11 표(Table)
 - 헤더와 셀을 구분할 때 3개 이상의 - 기호 필요
 ```
 테이블 생성
