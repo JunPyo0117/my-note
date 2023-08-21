@@ -1,8 +1,8 @@
 # MarkDown 사용법
 ## 개요
-1.장점
-2.단점
-3.사용법
+1. 장점
+2. 단점
+3. 사용법
   1. 제목(Header)
   2. 수평선(Horizontal Rules)
   3. 줄바꿈(Line Breaks)
