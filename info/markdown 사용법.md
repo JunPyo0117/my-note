@@ -14,6 +14,7 @@
    9. 링크(Links)
    10. 코드 블록(Code Block)
    11. 표(Table)
+4. 깃허브 블로그 포스팅
 
 ## 1.장점
 - 문법이 쉽고 간결
@@ -265,4 +266,21 @@ const mycar = {
 셀1|셀2|셀3|셀4
 셀5|셀6|셀7|셀8
 9|10|11|12
+
+## 4. 깃허브 블로그 포스팅
+- [Wins Cloud 기술 블로그](https://wins-cloud-msp.github.io/,"기술 블로그")
+- GitHub의 _post 폴더에 md 파일 생성
+- yyyy-mm-dd-제목.md 형식으로 저장
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/a9b94174-6719-491f-b3f0-0b4b3d4ad031)
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/2ec87edd-e557-46f8-9445-d609bce14fc4)  
+- 에디터에서 최상단 아래 입력값 입력 후 아래에 MarkDown 언어로 글 작성
+```
+---
+layout: post
+title: PostSQL 설치 가이드
+subtitle: PostSQL 설치 가이드
+categories: DBMS
+tags: [DBMS, PostgreSQL]
+---
+```
 
