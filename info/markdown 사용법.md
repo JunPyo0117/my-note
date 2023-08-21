@@ -205,7 +205,7 @@ const mycar = {
   model: "Accord",
   year: 1998,
 };
-\```
+```
 ```
 
 ```javascript
