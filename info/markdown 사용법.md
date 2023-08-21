@@ -204,8 +204,7 @@ const mycar = {
   make: "Honda",
   model: "Accord",
   year: 1998,
-};
-```
+};```
 ```
 
 ```javascript
