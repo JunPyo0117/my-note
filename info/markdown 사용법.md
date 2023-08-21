@@ -161,3 +161,61 @@ _혼합_ **사용** ~~가능~~
 \- 특수문자 표시 됨  
 
 ### 3-8 이미지(img)
+- 캡쳐한 이미지 붙여넣기로 업로드 가능
+```
+![텍스트](이미지파일경로.jpg)
+![텍스트](이미지파일URL)
+```
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/2135387a-96ac-4724-989f-9c7f5b87b8d2)
+
+### 3-9 링크(Links)
+- 외부 링크
+```
+[Google](http://www.google.com "구글")
+
+[Naver](http://www.naver.com "네이버")
+
+[Github](http://www.github.com "깃허브")
+```
+[Google](http://www.google.com "구글")  
+  
+[Naver](http://www.naver.com "네이버")  
+
+[Github](http://www.github.com "깃허브")  
+
+- 링크 이름 변경
+```
+[검색엔진](http://www.naver.com "네이버")
+```
+[검색엔진](http://www.naver.com "네이버")
+
+### 3-10 코드 블럭
+- 간단한 코드는 텍스트 앞 뒤로 ``기호 사용
+- ``` 또는 \~~~
+- ``` 옆에 언어 지정 시 syntax color 적용
+```
+```jacascript
+function myFunc(theObject) {
+  theObject.make = "Toyota";
+}
+
+const mycar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
+```
+```
+
+```jacascript
+function myFunc(theObject) {
+  theObject.make = "Toyota";
+}
+
+const mycar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
+```
+
