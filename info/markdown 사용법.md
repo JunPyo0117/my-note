@@ -3,17 +3,17 @@
 1. 장점
 2. 단점
 3. 사용법
-  1. 제목(Header)
-  2. 수평선(Horizontal Rules)
-  3. 줄바꿈(Line Breaks)
-  4. 강조(Emphasis)
-  5. 인용(Blockquotes)
-  6. 목록(List)
-  7. 특수문자 표현(Backslash Escapes)
-  8. 이미지(img)
-  9. 링크(Links)
-  10. 코드 블록(Code Block)
-  11. 표(Table)
+   1. 제목(Header)
+   2. 수평선(Horizontal Rules)
+   3. 줄바꿈(Line Breaks)
+   4. 강조(Emphasis)
+   5. 인용(Blockquotes)
+   6. 목록(List)
+   7. 특수문자 표현(Backslash Escapes)
+   8. 이미지(img)
+   9. 링크(Links)
+   10. 코드 블록(Code Block)
+   11. 표(Table)
 
 ## 1.장점
 - 문법이 쉽고 간결
