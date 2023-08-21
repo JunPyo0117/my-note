@@ -206,4 +206,16 @@ const mycar = {
   year: 1998,
 };
 ```
+
+```javascript
+function myFunc(theObject) {
+  theObject.make = "Toyota";
+}
+
+const mycar = {
+  make: "Honda",
+  model: "Accord",
+  year: 1998,
+};
 ```
+
