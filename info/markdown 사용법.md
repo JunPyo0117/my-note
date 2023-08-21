@@ -206,6 +206,7 @@ const mycar = {
   year: 1998,
 };
 ```
+```
 
 ```javascript
 function myFunc(theObject) {
