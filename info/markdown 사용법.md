@@ -193,7 +193,7 @@ _혼합_ **사용** ~~가능~~
 - 간단한 코드는 텍스트 앞 뒤로 ``기호 사용
 - \``` 또는 \~~~
 - \``` 옆에 언어 지정 시 syntax color 적용
-```
+
 ```javascript
 function myFunc(theObject) {
   theObject.make = "Toyota";
@@ -205,8 +205,8 @@ const mycar = {
   year: 1998,
 };
 ```
-```
----
+
+
 ```javascript
 function myFunc(theObject) {
   theObject.make = "Toyota";
