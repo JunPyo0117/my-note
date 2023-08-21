@@ -14,7 +14,7 @@
    9. 링크(Links)
    10. 코드 블록(Code Block)
    11. 표(Table)
-4. 깃허브 블로그 포스팅
+4. GitHub 블로그 포스팅
 
 ## 1.장점
 - 문법이 쉽고 간결
@@ -269,7 +269,7 @@ const mycar = {
 
 ## 4. 깃허브 블로그 포스팅
 - [Wins Cloud 기술 블로그](https://wins-cloud-msp.github.io/ "기술 블로그")
-- GitHub의 _post 폴더에 md 파일 생성
+- GitHub 블로그 레포지토리 `_post` 디렉터리에 `.md` 파일 생성
 - yyyy-mm-dd-제목.md 형식으로 저장
 ![image](https://github.com/JunPyo0117/my-note/assets/80608601/31dcba5f-9748-4029-9cef-7901833fdd7b)
 ![image](https://github.com/JunPyo0117/my-note/assets/80608601/2ec87edd-e557-46f8-9445-d609bce14fc4)  
