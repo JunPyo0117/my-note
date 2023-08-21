@@ -195,7 +195,7 @@ _혼합_ **사용** ~~가능~~
 - \``` 옆에 언어 지정 시 syntax color 적용
 
 ```
-
+```
 ```javascript
 function myFunc(theObject) {
   theObject.make = "Toyota";
