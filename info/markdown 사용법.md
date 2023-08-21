@@ -206,7 +206,7 @@ const mycar = {
 };
 ```
 ```
-
+---
 ```javascript
 function myFunc(theObject) {
   theObject.make = "Toyota";
