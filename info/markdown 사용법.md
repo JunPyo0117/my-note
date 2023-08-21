@@ -193,7 +193,24 @@ _혼합_ **사용** ~~가능~~
 - 간단한 코드는 텍스트 앞 뒤로 ``기호 사용
 - \``` 또는 \~~~
 - \``` 옆에 언어 지정 시 syntax color 적용
-
+- 지원 언어(코드블록 입력 시)
+  + Bash (bash)
+  + C# (cs)
+  + C++ (cpp)
+  + CSS (css)
+  + Diff (diff)
+  + HTML, XML (html)
+  + HTTP (http)
+  + Ini (ini)
+  + JSON (json)
+  + Java (java)
+  + JavaScript (javascript)
+  + PHP (php)
+  + Perl (perl)
+  + Python (python)
+  + Ruby (ruby)
+  + SQL (sql)
+  + Dart (dart)
 ```
 ```javascript
 function myFunc(theObject) {
@@ -218,3 +235,23 @@ const mycar = {
   year: 1998,
 };
 ```
+
+### 3-11 표(table)
+- 헤더와 셀을 구분할 때 3개 이상의 - 기호 필요
+```
+테이블 생성
+
+헤더1|헤더2|헤더3|헤더4
+---|---|---|---
+셀1|셀2|셀3|셀4
+셀5|셀6|셀7|셀8
+셀9|셀10|셀11|셀12
+```
+테이블 생성
+
+헤더1|헤더2|헤더3|헤더4
+---|---|---|---
+셀1|셀2|셀3|셀4
+셀5|셀6|셀7|셀8
+9|10|11|12
+
