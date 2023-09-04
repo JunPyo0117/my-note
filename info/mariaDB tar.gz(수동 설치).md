@@ -3,6 +3,7 @@
 1. mariaDB 파일 다운로드
 2. 유저 생성 압축파일 소유권 변경
 3. 설치
+4. 트러블슈팅
 
 ## 1. MariaDB 파일 다운로드
 [MariaDB 다운로드 링크](https://mariadb.org/download/?t=mariadb&p=mariadb&r=11.1.2&os=windows&cpu=x86_64&pkg=msi&m=blendbyte)  
@@ -38,7 +39,7 @@ export PATH=$PATH:$MARIADB_HOME/bin:.
 ```
 
 ### 저장 후 바로 적용
-source /etc/profile
+`source /etc/profile`
 
 ### mariaDB 설치
 `cd /usr/local/mysql`
@@ -53,15 +54,15 @@ source /etc/profile
 `mysql -u root -p`
 비밀번호 입력
 
-### mysql.sock 오류 해결 
-`sudo ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock`
-
 ### 원격 접근 허용
 ```
 MariaDB [(none)]> grant all privileges on *.* to 'root'@'%' identified by 'root의 비밀번호';
 MariaDB [(none)]> flush privileges;
 ```  
 
-## 오류 시
+## 트러블슈팅
 ### libaio 오류
 `yum install -y libaio`
+
+### mysql.sock 오류 해결 
+`sudo ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock`
