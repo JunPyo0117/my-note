@@ -16,3 +16,52 @@
 ### 유저 생성
 `useradd -g mysql mysql`  
 
+## 3. 설치
+### 압축 파일 소유권 변경
+`chown -R mysql:mysql mariadb*.tar.gz`
+
+### 압축 폴더를 /usr/local 아래로 이동
+`mv mariadb-*-linux-systemd-x86_64.tar.gz /usr/local/ `
+
+### 압축 해제
+`tar -zxvf mariadb*-linux-systemd-x86_64.tar.gz`
+
+### 심볼릭 링크 생성
+`ln -s ./mariadb*-linux-systemd-x86_64 /usr/local/mysql`
+
+### 환경변수 추가
+`vi /etc/profile`  
+
+```bash
+export MARIADB_HOME=/usr/local/mysql 
+export PATH=$PATH:$MARIADB_HOME/bin:.
+```
+
+### 저장 후 바로 적용
+source /etc/profile
+
+### mariaDB 설치
+`cd /usr/local/mysql`
+`./scripts/mysql_install_db --user=mysql`
+
+
+### 상태 확인
+`systemctl status mysqld`
+
+`mysqladmin -u root password '비밀번호'`
+
+`mysql -u root -p`
+비밀번호 입력
+
+### mysql.sock 오류 해결 
+`sudo ln -s /var/lib/mysql/mysql.sock /tmp/mysql.sock`
+
+### 원격 접근 허용
+```
+MariaDB [(none)]> grant all privileges on *.* to 'root'@'%' identified by 'root의 비밀번호';
+MariaDB [(none)]> flush privileges;
+```  
+
+## 오류 시
+### libaio 오류
+`yum install -y libaio`
