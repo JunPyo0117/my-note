@@ -78,3 +78,28 @@ Standby DB를 Primary DB의 복제본으로 만들기 위해 해당 명령어로
 `systemctl start postgresql-14` postgresql 서비스 시작
 
 ## 4. 결과 확인
+`ps -ef | grep postgres` 명령어로 각 서버의 sender, receiver 프로세스 확인  
+primary 서버  
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/0ad08468-5a93-4128-9e94-8f418d9f24c6)  
+
+standby 서버  
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/2dcb4875-6908-433c-bf56-c00ca9e6e41b)
+
+Replication 상태를 확인 가능  
+Primary에서 `select * from pg_stat_replication;`  
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/313ba8d4-0c39-4d0f-839a-1de762f40043)  
+
+Standby에서 `select * from pg_stat_wal_receiver;`  
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/3035c70c-9bd7-42e0-a0b8-0d1148b68491)  
+
+
+### Primary 서버에 DB생성 및 테이블 추가  
+- `su - postgres` 사용자 변경
+- `createdb replication` DB 생성
+- `\c replication` DB연결 후 테이블 생성
+- `INSERT INTO developers VALUES(1, '2023-09-11', '"c++"');` 데이터 추가
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/10508ae8-8bca-4163-82d8-a42c96a404ec)  
+
+### Standby 서버에서 데이터 Replication 확인
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/14a758d6-ac03-48d9-bb68-26b903314158)   
+
