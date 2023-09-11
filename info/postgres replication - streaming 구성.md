@@ -44,7 +44,7 @@ wal_level = replica 주석 제거
 postgres 동작 확인 `ps -ef | grep postgres`    
 ![image](https://github.com/JunPyo0117/my-note/assets/80608601/862a1e0a-dc0b-4ffb-879c-acf1a8a02277)  
 
-`systemctl stop postgresql-14` 명령어로 Postgres 중지
+`systemctl stop postgresql-14` 명령어로 Postgres 중지  
 ![image](https://github.com/JunPyo0117/my-note/assets/80608601/42e3bdb3-ada7-4f41-bfbc-043a42aa7c7b)  
 
 Standby DB를 Primary DB의 복제본으로 만들기 위해 해당 명령어로 기존 데이터 삭제   `rm -rf /var/lib/pgsql/14/data/*`  
