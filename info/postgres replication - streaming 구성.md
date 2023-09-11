@@ -15,7 +15,8 @@ Streaming|CentOS 7.9/Postgresql 14|CentOS 7.9/Postgresql 14
 ## 1. Streaming 방식
 - Streaming 복제는 PostgreSQL에서 가장 일반적으로 사용되는 방식
 - Primary Server 서버에서 변경된 로그 데이터를 Standby Server 서버로 스트리밍
-- PostgreSQL은 데이터 변경 사항을 WAL 파일에 로그로 기록합니다. 이 로그 파일은 변경 사항이 발생할 때마다 생성되며 변경 사항을 안전하게 저장
+- PostgreSQL은 데이터 변경 사항을 WAL 파일에 로그로 기록합니다. 이 로그 파일은 변경 사항이 발생할 때마다  
+  생성되며 변경 사항을 안전하게 저장  
 - Standby 서버는 변경 로그를 실시간으로 적용하여 마스터 서버와 동일한 데이터베이스를 유지
 
 
@@ -40,7 +41,40 @@ wal_level = replica 주석 제거
 `systemctl restart postgresql-14` 설정 파일 변경으로 Postgresql 서비스 재시작  
 
 ## 3. Standby 서버 설정
+postgres 동작 확인 `ps -ef | grep postgres`    
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/862a1e0a-dc0b-4ffb-879c-acf1a8a02277)  
 
+`systemctl stop postgresql-14` 명령어로 Postgres 중지
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/42e3bdb3-ada7-4f41-bfbc-043a42aa7c7b)  
 
+Standby DB를 Primary DB의 복제본으로 만들기 위해 해당 명령어로 기존 데이터 삭제   `rm -rf /var/lib/pgsql/14/data/*`  
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/5246cd4c-7476-4200-beff-efdc071a754d)  
+
+`su - postgres`에 사용자 전환 후  
+`pg_basebackup -h {Primary IP 주소} -U {Replication 유저명} --checkpoint=fast -D /var/lib/pgsql/14/data/ -R --slot={slot 이름} -C`  
+명령어를 통해 Primary의 DB 데이터 복사  
+
+1. `-D`또는 `--pgdata`:
+- 복제된 데이터를 저장할 디렉토리를 지정
+2. `U` 또는 `--username`:
+- PostgreSQL 데이터베이스에 연결할 때 사용할 사용자 이름을 지정
+3. `-h` 또는 `--host`:
+- PostgreSQL 서버의 호스트 이름 또는 IP 주소를 지정
+4. `--checkpoint=fast` 또는 `--checkpoint=spread`:
+- 백업을 시작하기 전에 PostgreSQL에서 자동으로 체크포인트를 수행할지 여부를 지정
+5. `-R`:
+- 스트림 복제 기능을 활성화하는 옵션, 스트림 복제를 위한 데이터 디렉토리 복제를 수행
+6. `--slot=some_name`:
+- Replication Slot 설정, 스트리밍 복제 중에 사용하는 슬롯의 이름을 지정하는 옵션
+- 슬롯을 사용하여 Primary에서 변경된 데이터를 Standby로 전달
+7. `-C`:
+- 백업 중에 파일 압축을 활성화하는 옵션  
+
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/ba074317-0d1d-45e7-b793-72b267696613)  
+
+`ls -l /var/lib/pgsql/14/data/` Primary에서 복사된 데이터 확인 가능  
+![image](https://github.com/JunPyo0117/my-note/assets/80608601/aefb3b41-6371-4b7e-b5a9-0e544083b5fd)  
+
+`systemctl start postgresql-14` postgresql 서비스 시작
 
 ## 4. 결과 확인
