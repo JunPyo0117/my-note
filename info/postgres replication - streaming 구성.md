@@ -8,11 +8,12 @@
 
 ## 0. 서버 정보 및 복제 대상
 
+### 서버 정보
 Replication|Primary Server|Standby Server
 ---|---|---|
 Streaming|CentOS 7.9/Postgresql 14|CentOS 7.9/Postgresql 14
 
-복제 대상
+### 복제 대상
 DB, 테이블, 시퀀스, 뷰, 함수 등 Primary DB에 있는 정보들이 Standby DB로 복제
 
 ## 1. Streaming 방식
@@ -102,6 +103,3 @@ Standby에서 `select * from pg_stat_wal_receiver;`
 - `\c replication` DB연결 후 테이블 생성
 - `INSERT INTO developers VALUES(1, '2023-09-11', '"c++"');` 데이터 추가
 ![image](https://github.com/JunPyo0117/my-note/assets/80608601/10508ae8-8bca-4163-82d8-a42c96a404ec)  
-
-### Standby 서버에서 데이터 Replication 확인
-![image](https://github.com/JunPyo0117/my-note/assets/80608601/14a758d6-ac03-48d9-bb68-26b903314158)   
